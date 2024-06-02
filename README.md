@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Settlement System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project implements a settlement system between two parties, Party A and Party B. It allows Party A to submit a settlement amount, which can be modified iteratively until Party B responds. Party B can either agree or dispute the submitted amount. The system ensures that all changes and responses are reflected on both Party A's and Party B's interfaces.
 
-## Available Scripts
+## Features
+- **Initial Submission**: Party A can submit an initial settlement amount.
+- **Modification and Resubmission**: Party A can modify and resubmit the settlement amount until Party B responds.
+- **Dispute and Agreement Handling**: Party B can dispute or agree to the submitted amount. If disputed, Party A can modify and resubmit the amount.
+- **Display Responses**: Party A’s interface displays Party B’s current response (dispute or agreement, and current amount), and Party B's interface displays the amount submitted by Party A.
+- **Settlement Completion**: Once Party B agrees, the system transitions to a settled state.
 
-In the project directory, you can run:
+## Technologies Used
+- React
+- Chakra UI
 
-### `npm start`
+## Installation
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+1. Start the development server:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Open your browser and go to `http://localhost:3000`.
 
-### `npm test`
+## Project Structure
+settlement-system/
+├── src/
+│ ├── components/
+│ │ ├── PartyA.tsx
+│ │ └── PartyB.tsx
+│ ├── App.tsx
+│ └── index.tsx
+└── README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Component Descriptions
+- **PartyA**: Component for Party A's interface, responsible for submitting settlement amounts and fetching responses from Party B.
+- **PartyB**: Component for Party B's interface, allowing Party B to respond to settlement submissions from Party A.
